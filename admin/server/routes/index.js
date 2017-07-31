@@ -44,7 +44,8 @@ module.exports = function IndexRoute(req, res) {
 		signoutUrl: keystone.get('signout url'),
 		user: {
 			id: req.user ? req.user.id : 'no-session',
-			name: UserList ? UserList.getDocumentName(req.user) || '(no name)' : '(no name)',
+			// name: UserList ? UserList.getDocumentName(req.user) || '(no name)' : '(no name)',
+			name: '(no name)',
 		},
 		userList: UserList ? UserList.key : 'NoUserModel',
 		version: keystone.version,
